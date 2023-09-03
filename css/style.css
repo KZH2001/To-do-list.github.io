@@ -1,4 +1,48 @@
-.list::before{
+ul li{
+    position: relative;
+}
+
+ ul li::before{
     content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 10px;
+    top: 12px;
+}
+
+
+ul li.checked{
+ text-decoration: line-through; 
+ color: #555;
+}
+ul li.checked::before{
+
+    background-image: url(../images/checked.png);
+} 
+
+.listBox{
+    max-height: 400px;
+    overflow-y: scroll;
     
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+li{
+    padding: 10px 0px;
+    padding-left: 50px;
+    margin-top:5px;
+    background-color: #d9d9d9;
+}
+span{
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    bottom: 2px;
+    cursor: pointer;    
 }
